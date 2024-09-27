@@ -13,10 +13,7 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
   app:
-    image: inventory-system
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: danieloliveira1/inventory-system:latest
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/inventory_db
       SPRING_DATASOURCE_USERNAME: inventory_user
